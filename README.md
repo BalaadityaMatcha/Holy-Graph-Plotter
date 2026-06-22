@@ -1,6 +1,6 @@
-# C++ and OpenGL 5-Week Curriculum
+# C++ and OpenGL 8-Week Curriculum
 
-This repository contains an intensive, progressive 5-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. 
+This repository contains an intensive, progressive 8-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. Currently completed till week 4.
 
 ## 📂 Project Structure
 
