@@ -1,35 +1,101 @@
 # C++ and OpenGL 8-Week Curriculum
 
-This repository contains an intensive, progressive 8-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. Currently completed till week 4.
+---
 
-## 📂 Project Structure
+## Overview
 
-The project is split into separate directories for each week, each containing its own standalone `CMakeLists.txt` build configuration.
+This repository contains an intensive, progressive 8-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. The project progresses from a C++ refresher and development toolchain setup to building a fully interactive 3D Rubik's Cube. Currently, the curriculum is completed up to Week 4.
 
-### Week 0: C++ Refresher (`week0_cpp_refresher`)
-A foundational overview of modern C++ paradigms. 
-* **Topics Covered:** References, RAII (Resource Acquisition Is Initialization), Smart Pointers (`std::unique_ptr`), Operator Overloading, Function Overloading, and Templates.
-* **Explanation:** Ensures a solid grasp of memory management and modern C++ features necessary for handling complex OpenGL object states cleanly.
+---
 
-### Week 1: Essential Tools (`week1_tools`)
-An introduction to the development toolchain used in C++ ecosystems.
-* **Topics Covered:** Git, GDB, CMake, Make, and Sanitizers (AddressSanitizer).
-* **Explanation:** Contains intentionally buggy code to practice finding out-of-bounds access and memory leaks using `gdb` and `-fsanitize=address`.
+## Week 0: C++ Refresher
 
-### Week 2: OpenGL Setup (`week2_opengl_setup`)
-The classic "Hello Triangle" in the graphics world.
-* **Topics Covered:** GLFW (Windowing), GLAD (Extension loading), GLM (Mathematics), and basic Shader generation (Vertex and Fragment shaders).
-* **Explanation:** Sets up the core OpenGL context and graphics pipeline to render a single shape to the screen.
+**Core Concepts**
 
-### Week 3: Transforms and Camera (`week3_transforms`)
-Entering the 3D space.
-* **Topics Covered:** Model/View/Projection matrices, 3D coordinates, and interactive camera systems.
-* **Explanation:** Renders a 3D, multi-colored cube. Implements an `OrbitCamera` class that allows the user to rotate their perspective around the cube using the Arrow Keys.
+* References, RAII (Resource Acquisition Is Initialization), and Smart Pointers (`std::unique_ptr`)
+* Operator Overloading, Function Overloading, and Templates
 
-### Week 4: Rubik's Cube (`week4_rubiks_cube`)
-A culminating interactive 3D application.
-* **Topics Covered:** Complex state management, hierarchical transformations, and keyboard input processing.
-* **Explanation:** A visual Rubik's Cube composed of 27 individual "cubies". Users can orbit the camera around the structure and dynamically rotate individual faces (U, D, L, R, F, B).
+**Explanation**
+
+* Ensures a solid grasp of memory management and modern C++ features necessary for handling complex OpenGL object states cleanly.
+
+---
+
+## Week 1: Essential Tools
+
+**Key Topics**
+
+* Git, GDB, CMake, Make
+* Sanitizers (AddressSanitizer)
+
+**Implementation & Analysis**
+
+* Contains intentionally buggy code to practice finding out-of-bounds access and memory leaks
+* Uses `gdb` and `-fsanitize=address` for debugging and memory safety verification
+
+---
+
+## Week 2: OpenGL Setup
+
+**Problem Setup**
+
+* Objective: Render the classic "Hello Triangle" in the graphics world
+
+**Libraries & Initialization**
+
+* GLFW for windowing and context creation
+* GLAD for loading OpenGL extensions
+* GLM for mathematics
+
+**Graphics Pipeline**
+
+* Sets up the core OpenGL context
+* Implements basic Shader generation (Vertex and Fragment shaders) to render a single shape to the screen
+
+---
+
+## Week 3: Transforms and Camera
+
+**Core Concepts**
+
+* Entering the 3D space with Model, View, and Projection matrices
+* 3D coordinates and depth testing
+
+**Implementation & Rendering**
+
+* Renders a 3D, multi-colored cube
+* Implements an `OrbitCamera` class that allows the user to rotate their perspective around the cube using the mouse (click and drag)
+
+---
+
+## Week 4: Rubik's Cube
+
+**Problem Setup**
+
+* Objective: Build a culminating interactive 3D application representing a visual Rubik's Cube composed of 27 individual "cubies".
+
+**Strategy Design**
+
+* Complex state management and hierarchical transformations
+* Keyboard input processing for interactive gameplay
+
+**Controls & Evaluation**
+
+* Users can orbit the camera around the structure dynamically using the mouse
+* Users can dynamically rotate individual faces (U, D, L, R, F, B), with the `Shift` key reversing the rotation direction
+* Press `Space` to reset the cube and camera to their initial states
+
+---
+
+## Summary
+
+* Week 0 established foundational knowledge in modern C++ paradigms and memory management
+* Week 1 introduced the essential development toolchain for C++ ecosystems, focusing on debugging and sanitizers
+* Week 2 set up the core OpenGL graphics pipeline and rendered the first shape
+* Week 3 expanded into 3D rendering with transformations and an interactive trackball camera
+* Week 4 integrated previous concepts to build a fully interactive, state-managed 3D Rubik's Cube
+
+Together, these stages demonstrate a progression from basic C++ tooling to building interactive, state-driven 3D graphical applications.
 
 ---
 
@@ -45,7 +111,7 @@ All OpenGL-dependent projects (Weeks 2-4) utilize CMake's `FetchContent` to auto
 To build any of the weekly projects, navigate to the specific week's directory and run CMake:
 
 ```bash
-cd week3_transforms
+cd Week 3
 
 # Configure the build and fetch dependencies
 cmake -S . -B build
@@ -57,8 +123,9 @@ cmake --build build
 Once compiled, you can run the generated executable located inside the `build/` directory.
 
 ## 🎮 Controls
-* **Week 3:** Use the **Arrow Keys** to orbit the camera around the cube. Press **ESC** to exit.
-* **Week 4:** 
-  * **Arrow Keys:** Orbit the camera around the Rubik's cube.
-  * **Faces:** Press **U** (Up), **D** (Down), **L** (Left), **R** (Right), **F** (Front), and **B** (Back) to rotate the respective layers of the cube.
+* **Camera (Week 3 & 4):** **Click and drag the left mouse button** to orbit the camera freely around the cube.
+* **Rubik's Cube (Week 4):** 
+  * **Faces:** Press **U** (Up), **D** (Down), **L** (Left), **R** (Right), **F** (Front), and **B** (Back) to rotate the respective layers of the cube clockwise.
+  * **Shift:** Hold **Shift** while pressing a face key to reverse the rotation (counter-clockwise).
+  * **Space:** Reset the Rubik's cube and camera to the starting state.
   * **ESC:** Exit the application.
