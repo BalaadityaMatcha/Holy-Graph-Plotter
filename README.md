@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains an intensive, progressive 8-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. The project progresses from a C++ refresher and development toolchain setup to building a fully interactive 3D Rubik's Cube. Currently, the curriculum is completed up to Week 4.
+This repository contains an intensive, progressive 8-week coding curriculum designed to build proficiency in modern C++, essential development tools, and 3D graphics programming using OpenGL. The project progresses from a C++ refresher and development toolchain setup to building a fully interactive 3D Graph Plotter. Currently, the curriculum is completed up to Week 4.
 
 ---
 
