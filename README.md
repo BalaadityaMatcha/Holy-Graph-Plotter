@@ -120,11 +120,12 @@ cmake -B build
 cmake --build build
 ```
 
-Once compiled, you can run the generated executable located inside the `build/` directory in the Week's directory.
+Once compiled, you can run the generated executable located inside the `build/` directory in the week's directory.
 
 ```bash
 cd Week 3
 
+# Run the executable
 ./build/executable
 ```
 
