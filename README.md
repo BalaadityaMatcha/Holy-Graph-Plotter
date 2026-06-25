@@ -114,13 +114,19 @@ To build any of the weekly projects, navigate to the specific week's directory a
 cd Week 3
 
 # Configure the build and fetch dependencies
-cmake -S . -B build
+cmake -B build
 
 # Compile the project
 cmake --build build
 ```
 
-Once compiled, you can run the generated executable located inside the `build/` directory.
+Once compiled, you can run the generated executable located inside the `build/` directory in the Week's directory.
+
+```bash
+cd Week 3
+
+./build/executable
+```
 
 ## 🎮 Controls
 * **Camera (Week 3 & 4):** **Click and drag the left mouse button** to orbit the camera freely around the cube.
