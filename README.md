@@ -106,6 +106,8 @@ All OpenGL-dependent projects (Weeks 2-4) utilize CMake's `FetchContent` to auto
 ### Prerequisites
 * A modern C++ compiler supporting C++17 (e.g., GCC, Clang, or MSVC).
 * [CMake](https://cmake.org/download/) (version 3.14 or higher).
+***Operating System**: Windows or Linux (macOS is not natively supported due to OpenGL Compatibility Profile constraints).
+*GPU with support for **OpenGL 4.5 (Compatibility Profile)** or higher.
 
 ### Build Instructions
 To build any of the weekly projects, navigate to the specific week's directory and run CMake:
